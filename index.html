@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudStudio Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0c0c2d 0%, #1a1a4e 40%, #1e3a5f 70%, #0c2d1e 100%);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .card {
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      font-size: 13px;
+      color: #a0d2f0;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #60c0ff, #40e0a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p.desc {
+      font-size: 1.05em;
+      color: #b0c8d8;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .feature {
+      padding: 20px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .feature .icon {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .feature .label {
+      font-size: 0.85em;
+      color: #90b8d0;
+      font-weight: 500;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: rgba(64, 224, 160, 0.1);
+      border: 1px solid rgba(64, 224, 160, 0.3);
+      color: #40e0a0;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+
+    .status .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #40e0a0;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .footer {
+      margin-top: 48px;
+      font-size: 0.8em;
+      color: #6080a0;
+    }
+
+    @media (max-width: 480px) {
+      .features { grid-template-columns: 1fr; }
+      h1 { font-size: 1.8em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">WORKBUDDY + CLOUDSTUDIO</div>
+    <h1>部署成功!</h1>
+    <p class="desc">
+      这个页面由 <strong>WorkBuddy</strong> 生成，通过 <strong>CloudStudio</strong> 一键部署上线。
+      全程无需配置服务器，写完即上线。
+    </p>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <div class="label">即时部署</div>
+      </div>
+      <div class="feature">
+        <div class="icon">🌐</div>
+        <div class="label">公网访问</div>
+      </div>
+      <div class="feature">
+        <div class="icon">🔒</div>
+        <div class="label">HTTPS 安全</div>
+      </div>
+    </div>
+    <div class="status">
+      <span class="dot"></span>
+      在线运行中
+    </div>
+    <div class="footer">
+      Powered by WorkBuddy &bull; 2026
+    </div>
+  </div>
+</body>
+</html>
